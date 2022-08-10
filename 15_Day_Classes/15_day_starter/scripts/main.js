@@ -103,3 +103,24 @@ console.log(s1.getPersonInfo())
 console.log(s2.saySomething())
 console.log(s2.getFullName())
 console.log(s2.getPersonInfo())
+
+class animal {
+  constructor(name, age, color, legs){
+    this.name = name
+    this.age = age
+    this.color = color
+    this.legs = legs
+  }
+  sound(){
+    console.log('bark')
+  }
+}
+
+const dog = new animal('dog', 50, 'blue', 4)
+console.log(dog)
+
+const cat = new animal('cat', 50, 'green', 4)
+console.log(cat)
+
+// level 
+
