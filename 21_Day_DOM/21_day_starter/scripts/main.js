@@ -5,7 +5,6 @@ const fistHeader = document.querySelector('h1')
 const randColorEl = document.createElement('p')
 const unorderedList = document.querySelector('ul')
 const list = document.querySelectorAll('li')
-console.log(list)
 
 
 
@@ -52,7 +51,7 @@ function timer(){
     let mm = date.getMinutes();
     let ss = date.getSeconds();
     
-    let time = `${month} ${day}, ${currentYear} ${hh}: ${mm}: ${ss}`
+    let time = `${month} ${day}, ${currentYear} ${hh} : ${mm} : ${ss}`
     randColorEl.innerHTML = time
 }setInterval(timer,  1000)
 
@@ -74,3 +73,25 @@ randColorEl.style.borderRadius = '10px'
 // items
 
 
+list.forEach((lists) => {
+    
+    // dynamic colors
+    if (lists.textContent.includes('Done')) {
+        console.log(lists.style.backgroundColor = 'green')
+    }
+    else if (lists.textContent.includes('Ongoing')) {
+        lists.style.backgroundColor = 'yellow'
+    }
+    else{
+        lists.style.backgroundColor = 'orange'
+    }
+    
+    lists.style.fontSize = '20px'
+    lists.style.marginTop = '2px'
+    lists.style.padding = '5px'
+    lists.style.borderRadius = '5px'
+})
+
+unorderedList.style.width = '50%'
+unorderedList.style.listStyle = 'none'
+unorderedList.style.margin = 'auto'
