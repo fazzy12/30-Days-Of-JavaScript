@@ -51,7 +51,7 @@ function timer(){
     let mm = date.getMinutes();
     let ss = date.getSeconds();
     
-    let time = `${month} ${day}, ${currentYear} ${hh} : ${mm} : ${ss}`
+    let time = `${month} ${day}, ${currentYear}  ${hh} : ${mm} : ${ss}`
     randColorEl.innerHTML = time
 }setInterval(timer,  1000)
 
