@@ -44,3 +44,4 @@ container.style.width = '50%'
 container.style.margin = 'auto'
 
 
+console.log(grids)
